@@ -3,10 +3,9 @@
 from langchain.tools import tool
 from langchain_google_genai import ChatGoogleGenerativeAI
 import os
-import getpass
+from dotenv import load_dotenv
 
-if "GOOGLE_API_KEY" not in os.environ:
-    os.environ["GOOGLE_API_KEY"] = getpass.getpass("Enter your Gemini API key: ")
+load_dotenv()  # loads GOOGLE_API_KEY from .env
 
 model = ChatGoogleGenerativeAI(
     model="gemini-2.5-flash",
