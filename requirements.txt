@@ -4,3 +4,4 @@ langgraph
 typing_extensions
 IPython
 python-dotenv
+# smtplib is part of Python's standard library — no install needed
